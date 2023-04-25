@@ -1,0 +1,23 @@
+<h1>Cadastrar Empregado</h1>
+
+<form action="/empregados/cadastrar" method="post">
+<input type="hidden" name="id" id="id" value="{{empregado.id}}">
+<div>
+<label for="nome">Nome</label>
+<input type="text" name="nome" id="nome" value="{{empregado.nome}}"/> 
+</div>
+<div style="margin-top:10px"><label for="sobrenome">Sobrenome</label>
+<textarea name="sobrenome" >{{empregado.sobrenome}}</textarea>
+</div>
+<div style="margin-top:10px"><label for="salario">Salário</label>
+<input name="salario" type="number" value="{{empregado.salario}}"></input>
+</div>
+<div style="margin-top:10px"><label for="data_nascimento">Data de Nascimento</label>
+<input name="data_nascimento" type="date" value="{{empregado.data_nascimento}}"></input>
+</div>
+<div style="margin-top:10px"><label for="id_projeto">ID do Projeto</label>
+<input name="id_projeto" type="number" value="{{empregado.id_projeto}}"></input>
+</div>
+
+<button type="submit">Salvar</button>
+</form>

@@ -1,0 +1,23 @@
+<h1>Lista de Projetos</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>Data de Início</td>
+            <td>Data de Término</td>
+            <td>Descrição</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each projetos}}
+        <tr>
+            <td>{{nome}}</td>
+            <td>{{data_inicio}}</td>
+            <td>{{data_termino}}</td>
+            <td>{{descricao}}</td>
+            <td><a href="/projetos/editar?id={{id}}">Editar</a></td>
+            <td><a href="/projetos/remover?id={{id}}">Remover</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+<h1>Lista de Empregados</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>Sobrenome</td>
+            <td>Salário</td>
+            <td>Data de Nascimento</td>
+            <td>ID do Projeto</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each empregados}}
+        <tr>
+            <td>{{nome}}</td>
+            <td>{{sobrenome}}</td>
+            <td>{{salario}}</td>
+            <td>{{data_nascimento}}</td>
+            <td>{{id_projeto}}</td>
+            <td><a href="/empregados/editar?id={{id}}">Editar</a></td>
+            <td><a href="/empregados/remover?id={{id}}">Remover</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
